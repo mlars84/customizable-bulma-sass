@@ -1,9 +1,14 @@
+// You can use Bulma's initial-variables as-is in your HTML or customize them here BEFORE the bulma @import e.g.
 
+$dark: hsl(0, 0, 0); // changes the bulma $dark variable from $grey-darker/hsl(0, 0%, 21%) to full black
+// Delete the above line to reset $dark to it's intital value
 
-// $primary: blue;
+// Uncomment line 7 to set $primary to a "lovely" flesh tone.
+// $primary: hsl(20, 90, 90);
 
-// body {
-//   background: $primary;
-// }
+@import '../vendors/bulma/bulma.sass'; // imports all of bulma's defaults
 
-@import '../vendors/bulma/bulma.sass';
+// to use bulma variables as-is in your CSS, code here BELOW the @import
+html {
+  background: $primary; //will be $turquoise/hsl(171, 100%, 41%) UNLESS you've customized $primary above the @import
+}
